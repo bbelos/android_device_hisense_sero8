@@ -1,0 +1,45 @@
+Partition layout is generated from parameters on kernel cmdline.
+Differs for android and recovery.
+
+Partition layout for Android:
+  31        0       4096 mtdblock0  misc
+  31        1      12288 mtdblock1  kernel
+  31        2      12288 mtdblock2  boot
+  31        3      32768 mtdblock3  recovery
+  31        4      65536 mtdblock4  backup
+  31        5    1048576 mtdblock5  cache
+  31        6       4096 mtdblock6  metadata
+  31        7       4096 mtdblock7  kpanic
+  31        8    1048576 mtdblock8  system
+  31        9   13369344 mtdblock9  userdata
+
+ 179        0    1966080 mmcblk0
+ 179        1    1965952 mmcblk0p1
+
+Partition layout for Recovery:
+  31        0       4096 mtdblock0  parameter
+  31        1       4096 mtdblock1  misc
+  31        2      12288 mtdblock2  kernel
+  31        3      12288 mtdblock3  boot
+  31        4      32768 mtdblock4  recovery
+  31        5      65536 mtdblock5  backup
+  31        6    1048576 mtdblock6  cache
+  31        7       4096 mtdblock7  metadata
+  31        8       4096 mtdblock8  kpanic
+  31        9    1048576 mtdblock9  system
+  31       10   13369344 mtdblock10 userdata
+
+ 179        0    1966080 mmcblk0
+ 179        1    1965952 mmcblk0p1
+
+0x00000000-0x00002000 : "parameter"
+0x00002000-0x00004000 : "misc"
+0x00004000-0x0000a000 : "kernel"
+0x0000a000-0x00010000 : "boot"
+0x00010000-0x00020000 : "recovery"
+0x00020000-0x00040000 : "backup"
+0x00040000-0x00240000 : "cache"
+0x00240000-0x00242000 : "metadata"
+0x00242000-0x00244000 : "kpanic"
+0x00244000-0x00484000 : "system"
+0x00484000-0xee400000 : "userdata"
