@@ -27,6 +27,8 @@ TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt
 
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
 
+BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/custombootimg.mk
+
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 
