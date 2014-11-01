@@ -32,5 +32,9 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+# Init files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/root/fstab.rk30board:root/fstab.rk30board
+
 
 PRODUCT_CHARACTERISTICS := tablet

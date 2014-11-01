@@ -39,3 +39,7 @@ USE_OPENGL_RENDERER := true
 
 # rk30sdk uses Cortex A9
 TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune=cortex-a8)) $(call cc-option,-mcpu=cortex-a9,$(call cc-option,-mcpu=cortex-a8))
+
+# Recovery
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/root/fstab.rk30board
+RECOVERY_FSTAB_VERSION := 2
