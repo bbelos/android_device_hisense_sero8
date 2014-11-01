@@ -39,3 +39,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/rk30xxnand_ko.ko.3.0.36+:root/rk30xxnand_ko.ko.3.0.36+
 
 PRODUCT_CHARACTERISTICS := tablet
+
+$(call inherit-product-if-exists, vendor/hisense/sero8/sero8-vendor.mk)
+
