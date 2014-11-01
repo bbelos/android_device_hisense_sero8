@@ -45,3 +45,6 @@ TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/root/fstab.rk30board
 RECOVERY_FSTAB_VERSION := 2
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := rk3188
