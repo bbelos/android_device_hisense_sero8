@@ -34,7 +34,8 @@ PRODUCT_COPY_FILES += \
 
 # Init files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/root/fstab.rk30board:root/fstab.rk30board
-
+    $(LOCAL_PATH)/root/fstab.rk30board:root/fstab.rk30board \
+    $(LOCAL_PATH)/root/init.rk30board.rc:root/init.rk30board.rc \
+    $(LOCAL_PATH)/root/rk30xxnand_ko.ko.3.0.36+:root/rk30xxnand_ko.ko.3.0.36+
 
 PRODUCT_CHARACTERISTICS := tablet
