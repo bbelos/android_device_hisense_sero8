@@ -29,6 +29,8 @@ TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
 
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/custombootimg.mk
 
+BOARD_EGL_CFG := $(LOCAL_PATH)/gpu/egl.cfg
+
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 
