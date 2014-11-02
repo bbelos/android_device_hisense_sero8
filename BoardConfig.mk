@@ -46,5 +46,7 @@ TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/root/fstab.rk30board
 RECOVERY_FSTAB_VERSION := 2
 
+TARGET_RELEASETOOLS_EXTENSIONS := device/hisense/sero8/releasetools
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := rk3188
