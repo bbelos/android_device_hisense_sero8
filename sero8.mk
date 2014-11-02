@@ -17,6 +17,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
+DEVICE_PACKAGE_OVERLAYS += device/hisense/sero8/overlay
+
 LOCAL_PATH := device/hisense/sero8
 
 PRODUCT_PROPERTY_OVERRIDES += \
