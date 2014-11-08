@@ -59,5 +59,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+# Default props
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opengles.version=131072 \
+    debug.hwui.render_dirty_regions=false \
+    ro.config.facelock=enable_facelock \
+    persist.facelock.detect_cutoff=5000 \
+    persist.facelock.recog_cutoff=5000 \
+    ro.audio.flinger_standbytime_ms=1000 \
+    wifi.interface=wlan0 \
+    wifi.supplicant_scan_interval=15 \
+    dalvik.vm.debug.alloc=0
+
 $(call inherit-product-if-exists, vendor/hisense/sero8/sero8-vendor.mk)
 
