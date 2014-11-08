@@ -60,7 +60,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/audio_policy.conf:/system/etc/audio_policy.conf \
     $(LOCAL_PATH)/config/media_codecs.xml:/system/etc/media_codecs.xml \
     $(LOCAL_PATH)/config/media_profiles.xml:/system/etc/media_profiles.xml \
-    $(LOCAL_PATH)/config/media_profiles_default.xml:/system/etc/media_profiles_default.xml
+    $(LOCAL_PATH)/config/media_profiles_default.xml:/system/etc/media_profiles_default.xml \
+    $(LOCAL_PATH)/config/p2p_supplicant_overlay.conf:/system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/config/wpa_supplicant_overlay.conf:/system/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_CHARACTERISTICS := tablet
 
