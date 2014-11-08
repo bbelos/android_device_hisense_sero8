@@ -54,6 +54,14 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio.r_submix.default
 
+# Configs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/asound.conf:/system/etc/asound.conf \
+    $(LOCAL_PATH)/config/audio_policy.conf:/system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/config/media_codecs.xml:/system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/config/media_profiles.xml:/system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/config/media_profiles_default.xml:/system/etc/media_profiles_default.xml
+
 PRODUCT_CHARACTERISTICS := tablet
 
 PRODUCT_TAGS += dalvik.gc.type-precise
