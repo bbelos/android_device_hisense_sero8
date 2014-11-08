@@ -43,6 +43,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/ueventd.rk30board.rc:root/ueventd.rk30board.rc \
     $(LOCAL_PATH)/root/rk30xxnand_ko.ko.3.0.36+:root/rk30xxnand_ko.ko.3.0.36+
 
+# Libs
+PRODUCT_PACKAGES += \
+    audio_policy.default \
+    audio.a2dp.default \
+    audio.usb.default \
+    audio.r_submix.default
+
 PRODUCT_CHARACTERISTICS := tablet
 
 PRODUCT_TAGS += dalvik.gc.type-precise
