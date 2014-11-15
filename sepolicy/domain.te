@@ -1,0 +1,2 @@
+allow domain ump_device:chr_file rw_file_perms;
+allow domain mali_device:chr_file rw_file_perms;

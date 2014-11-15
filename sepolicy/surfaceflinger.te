@@ -1,0 +1,2 @@
+allow surfaceflinger mali_device:chr_file rw_file_perms;
+allow surfaceflinger ump_device:chr_file rw_file_perms;

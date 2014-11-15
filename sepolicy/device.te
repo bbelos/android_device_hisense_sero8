@@ -1,0 +1,2 @@
+type ump_device, dev_type, mlstrustedobject;
+type mali_device, dev_type, mlstrustedobject;

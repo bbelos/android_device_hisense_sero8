@@ -1,0 +1,4 @@
+allow init self:capability { sys_module mknod };
+allow kernel self:capability { sys_module mknod };
+allow netd kernel:system module_request;
+allow kernel device:blk_file { create setattr };

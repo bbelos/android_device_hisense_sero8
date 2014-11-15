@@ -78,3 +78,18 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/hisense/sero8/releasetools
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := rk3188
+
+BOARD_SEPOLICY_DIRS += \
+        device/hisense/sero8/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+        device.te \
+        domain.te \
+        file_contexts \
+        genfs_contexts \
+        mediaserver.te \
+        nand.te \
+        property.te \
+        property_contexts \
+        surfaceflinger.te \
+        system.te
