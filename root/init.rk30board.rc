@@ -25,7 +25,7 @@ on post-fs
     chown root system /system/lib/hw/gps.default.so
     mkdir /data/gps
     chmod 770 /data/gps
-    chown system net_bt_stack /data/gps
+    chown system bluetooth /data/gps
     mkdir /data/fw
     chmod 777 /data/fw
 

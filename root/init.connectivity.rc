@@ -4,8 +4,8 @@ on early-init
     # bluetooth LPM
     chmod 0220 /proc/bluetooth/sleep/lpm
     chmod 0220 /proc/bluetooth/sleep/btwrite
-    chown bluetooth net_bt_stack /proc/bluetooth/sleep/lpm
-    chown bluetooth net_bt_stack /proc/bluetooth/sleep/btwrite
+    chown bluetooth bluetooth /proc/bluetooth/sleep/lpm
+    chown bluetooth bluetooth /proc/bluetooth/sleep/btwrite
 
 on init
 
@@ -19,9 +19,9 @@ on boot
 
 
 # permissions for bluetooth.
-    mkdir /data/misc/bluetoothd 0775 bluetooth net_bt_stack
+    mkdir /data/misc/bluetoothd 0775 bluetooth bluetooth
     setprop ro.bt.bdaddr_path "/data/misc/bluetoothd/bt_addr"
-    chown bluetooth net_bt_stack ro.bt.bdaddr_path
+    chown bluetooth bluetooth ro.bt.bdaddr_path
 
 # for wifi
     # mt7601u
@@ -46,23 +46,23 @@ on boot
     chmod 0660 /dev/ttyS0
     chmod 0660 /dev/ttyS2
     chmod 0660 /dev/vflash
-    chown bluetooth net_bt_stack /dev/vflash
-    chown bluetooth net_bt_stack /dev/ttyS2
-    chown bluetooth net_bt_stack /dev/ttyS0
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth /dev/vflash
+    chown bluetooth bluetooth /dev/ttyS2
+    chown bluetooth bluetooth /dev/ttyS0
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chmod 0664 /sys/class/rfkill/rfkill0/state
 
     chmod 0660 /dev/bthwctl
-    chown bluetooth net_bt_stack /dev/bthwctl
-    mkdir /data/bluetooth 0771 bluetooth net_bt_stack
+    chown bluetooth bluetooth /dev/bthwctl
+    mkdir /data/bluetooth 0771 bluetooth bluetooth
 
 #for rda bt
     chmod 0664 /dev/tcc_bt_dev
-    chown bluetooth net_bt_stack /dev/tcc_bt_dev
+    chown bluetooth bluetooth /dev/tcc_bt_dev
 
     chmod 0664 /dev/voice_modem
-    chown bluetooth net_bt_stack /dev/voice_modem
+    chown bluetooth bluetooth /dev/voice_modem
 
 #add for wifi direct (gwl)
 service bcm_supplicant /system/bin/bcm_supplicant \
