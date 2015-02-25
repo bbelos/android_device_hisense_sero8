@@ -1,15 +1,16 @@
 # Android fstab file.
-#<src>                                       <mnt_point>         <type>    <mnt_flags and options>       <fs_mgr_flags>
-#misc       /misc	mtd	defaults	recoveryonly
-kernel     /kernel	mtd	defaults	recoveryonly
-boot 		/boot       mtd	defaults	recoveryonly
-recovery	/recovery   mtd defaults	recoveryonly
-/dev/block/mtdblock6		/cache      ext4               defaults	defaults
-/dev/block/mtdblock10	/data       ext4        	   defaults	recoveryonly
-/dev/block/mtdblock9		/system     ext4        	   defaults	recoveryonly
-/devices/platform/rk29_sdmmc.0/mmc_host/mmc0	auto	auto	defaults	voldmanaged=sdcard1:auto
-#/external_sd    vfat    /dev/block/mmcblk0p1    /dev/block/mmcblk0      flags=wipeingui;storage;removable
-#/usb-otg    auto        /dev/block/sda   /dev/block/sda1      flags=display="USB Storage";storage;wipeingui;removable
 
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
+#<src>                                             <mnt_point>       <type>      <mnt_flags>                                         <fs_mgr_flags>
 
+/dev/block/mtd/by-name/system                      /system           ext4        ro,noatime,noauto_da_alloc,discard                  wait
+/dev/block/mtd/by-name/cache                       /cache            ext4        noatime,nosuid,nodev,noauto_da_alloc,discard        wait
+/dev/block/mtd/by-name/userdata                    /data             ext4        noatime,nosuid,nodev,noauto_da_alloc,discard        wait,encryptable=/dev/block/mtd/by-name/metadata
+
+/devices/platform/rk29_sdmmc.0/mmc_host/mmc0*       auto              auto        defaults                                            voldmanaged=sdcard1:auto
+/devices/platform/usb20_otg/usb*                    auto              auto        defaults                                            voldmanaged=usbdisk:auto
+
+boot                                               /boot             mtd         defaults                                            recoveryonly
+recovery                                           /recovery         mtd         defaults                                            recoveryonly
