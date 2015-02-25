@@ -190,8 +190,9 @@ on charger
     export LD_LIBRARY_PATH /vendor/lib:/system/lib
     setprop sys.usb.config adb
 
-service charger /charger
-    disabled
+service charger /sbin/healthd -c
+    critical
+    seclabel u:r:healthd:s0
 
 service akmd /system/bin/akmd
         class main
