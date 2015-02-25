@@ -16,8 +16,6 @@
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1024
 TARGET_SCREEN_WIDTH := 768
-# Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/gsm.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := sero8
