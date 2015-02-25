@@ -81,7 +81,7 @@ RECOVERY_FSTAB_VERSION := 2
 TARGET_RELEASETOOLS_EXTENSIONS := device/hisense/sero8/releasetools
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := rk3188
+TARGET_OTA_ASSERT_DEVICE := rk3188,sero8
 
 BOARD_SEPOLICY_DIRS += \
         device/hisense/sero8/sepolicy
