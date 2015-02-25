@@ -27,6 +27,7 @@ TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt
 
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
 
+BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/custombootimg.mk
 
 BOARD_EGL_CFG := $(LOCAL_PATH)/gpu/egl.cfg
