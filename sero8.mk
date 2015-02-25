@@ -22,6 +22,7 @@ DEVICE_PACKAGE_OVERLAYS += device/hisense/sero8/overlay
 LOCAL_PATH := device/hisense/sero8
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.input.hwrotation=270 \
     ro.sf.lcd_density=160 \
     ro.sf.hwrotation=270
 
