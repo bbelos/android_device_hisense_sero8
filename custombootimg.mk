@@ -20,8 +20,10 @@ INSTALLED_BOOTIMAGE_TARGET := $(PRODUCT_OUT)/boot.img
 INSTALLED_RECOVERYIMAGE_TARGET := $(PRODUCT_OUT)/recovery.img
 
 $(INSTALLED_BOOTIMAGE_TARGET): $(INSTALLED_RAMDISK_TARGET) $(RKCRC)
+	@echo ----- Making RK boot image ------
 	$(call pretty,"Boot image: $@")
 	$(hide) $(RKCRC) -k $(INSTALLED_RAMDISK_TARGET) $(PRODUCT_OUT)/boot.img
+	@echo ----- Made RK boot image ------
 
 $(INSTALLED_RECOVERYIMAGE_TARGET): $(recovery_ramdisk) $(RKCRC)
 	@echo ----- Making RK recovery image ------
