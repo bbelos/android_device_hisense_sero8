@@ -59,6 +59,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/asound.conf:/system/etc/asound.conf \
     $(LOCAL_PATH)/config/audio_policy.conf:/system/etc/audio_policy.conf \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_ffmpeg.xml:system/etc/media_codecs_ffmpeg.xml \
     $(LOCAL_PATH)/config/media_codecs.xml:/system/etc/media_codecs.xml \
     $(LOCAL_PATH)/config/media_profiles.xml:/system/etc/media_profiles.xml \
     $(LOCAL_PATH)/config/media_profiles_default.xml:/system/etc/media_profiles_default.xml \
