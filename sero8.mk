@@ -44,8 +44,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/rk30xxnand_ko.ko.3.0.36+:root/rk30xxnand_ko.ko.3.0.36+
 
 PRODUCT_PACKAGES += \
-    charger_res_images \
-    charger
+    charger_res_images
 
 # Libs
 PRODUCT_PACKAGES += \
