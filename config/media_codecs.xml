@@ -76,13 +76,26 @@ Only the three quirks included above are recognized at this point:
 -->
 
 <MediaCodecs>
+    <Include href="media_codecs_google_audio.xml" />
+    <Encoders>
+<!--
+        <MediaCodec name="OMX.rk.video_encoder.avc" type="video/avc" />
+        <MediaCodec name="RkOn2Encoder" type="video/avc" />
+	<MediaCodec name="OMX.google.h263.encoder" type="video/3gpp" />
+	<MediaCodec name="OMX.google.mpeg4.encoder" type="video/mp4v-es" />
+-->
+    </Encoders>
     <Decoders>
+<!--
 	<MediaCodec name="OMX.rk.video_decoder.avc" type="video/avc" />
         <MediaCodec name="OMX.rk.video_decoder.m2v" type="video/mpeg2" /> 
         <MediaCodec name="OMX.google.vp8.decoder" type="video/x-vnd.on2.vp8" /> 
         <MediaCodec name="OMX.google.vp9.decoder" type="video/x-vnd.on2.vp9" /> 
+-->
+<!--
         <MediaCodec name="OMX.rk.video_decoder.h263" type="video/3gpp" />
         <MediaCodec name="OMX.rk.video_decoder.m4v" type="video/mp4v-es" />
+
         <MediaCodec name="RkOn2Decoder" type="video/avc" />
         <MediaCodec name="RkOn2Decoder" type="video/vnd.rn-realvideo" />
         <MediaCodec name="RkOn2Decoder" type="video/flv" />
@@ -95,14 +108,6 @@ Only the three quirks included above are recognized at this point:
         <MediaCodec name="RkOn2Decoder" type="video/x-vnd.on2.vp8" />
         <MediaCodec name="RkOn2Decoder" type="video/hevc" />
 
-        <MediaCodec name="OMX.google.amrnb.decoder" type="audio/3gpp" />
-        <MediaCodec name="OMX.google.amrwb.decoder" type="audio/amr-wb" />
-        <MediaCodec name="OMX.google.aac.decoder" type="audio/mp4a-latm" />
-        <MediaCodec name="OMX.google.g711.alaw.decoder" type="audio/g711-alaw" />
-        <MediaCodec name="OMX.google.g711.mlaw.decoder" type="audio/g711-mlaw" />
-        <MediaCodec name="OMX.google.vorbis.decoder" type="audio/vorbis" />
-        <MediaCodec name="OMX.google.mp3.decoder" type="audio/mpeg" />
-
         <MediaCodec name="RkAudioDecoder_DTS" type="audio/vnd.dts.hd" />
         <MediaCodec name="RkAudioDecoder_WMA" type="audio/x-ms-wma" />
         <MediaCodec name="RkAudioDecoder_WMAPRO" type="audio/x-ms-wmapro" />
@@ -110,19 +115,10 @@ Only the three quirks included above are recognized at this point:
         <MediaCodec name="RkAudioDecoder_RA" type="audio/vnd.rn-realaudio" />
         <MediaCodec name="RkAudioDecoder_AAC" type="audio/mp4a-latm" />
         <MediaCodec name="RkAudioDecoder_WAV" type="audio/wav" />
+-->
         <MediaCodec name="FLACDecoder" type="audio/flac" /> 
         <MediaCodec name="AACDecoder_MIRRORING" type="audio/mp4a-latm" /> 
     </Decoders>
-                                                                                                            
-    <Encoders>
-        <MediaCodec name="OMX.google.vp8.encoder" type="video/x-vnd.on2.vp8" />
-        <MediaCodec name="OMX.rk.video_encoder.avc" type="video/avc" />
-        <MediaCodec name="RkOn2Encoder" type="video/avc" />
-	    <MediaCodec name="OMX.google.h263.encoder" type="video/3gpp" />
-	    <MediaCodec name="OMX.google.mpeg4.encoder" type="video/mp4v-es" />
-        <MediaCodec name="OMX.google.amrnb.encoder" type="audio/3gpp" />
-        <MediaCodec name="OMX.google.amrwb.encoder" type="audio/amr-wb" />
-        <MediaCodec name="OMX.google.aac.encoder" type="audio/mp4a-latm" />
-        <MediaCodec name="OMX.google.flac.encoder" type="audio/flac" />
-    </Encoders>
+    <Include href="media_codecs_google_video.xml" />
+    <Include href="media_codecs_ffmpeg.xml" />
 </MediaCodecs>
