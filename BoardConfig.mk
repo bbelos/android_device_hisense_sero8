@@ -83,6 +83,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/hisense/sero8/releasetools
 # Assert
 TARGET_OTA_ASSERT_DEVICE := rk3188,sero8
 
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+
 BOARD_SEPOLICY_DIRS += \
         device/hisense/sero8/sepolicy
 
