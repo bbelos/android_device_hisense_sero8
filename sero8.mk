@@ -82,6 +82,16 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+# Wifi
+PRODUCT_PACKAGES += \
+    dhcpcd.conf \
+    hostapd \
+    hostapd_default.conf \
+    libwpa_client \
+    macloader \
+    wpa_supplicant \
+    wpa_supplicant.conf
+
 # Default props
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
